@@ -31,7 +31,7 @@ function CompanyList() {
     <div className="flex flex-col min-h-screen bg-gray-100 md:flex-row">
       {/* Toggle Button for Sidebar */}
       <button
-        className="p-2 bg-purple-600 text-white rounded md:hidden m-4 self-start"
+        className="p-2 bg-redMakit text-white rounded md:hidden m-4 self-start"
         onClick={() => setShowFilter(!showFilter)}
       >
         {showFilter ? 'Hide Filters' : 'Show Filters'}
@@ -54,7 +54,7 @@ function CompanyList() {
           ))}
         </div>
         <button
-            className="p-2 bg-purple-900 text-white rounded md:hidden m-4 self-start"
+            className="p-2 bg-red-800 text-white rounded md:hidden m-4 self-start"
             onClick={() => setShowFilter(!showFilter)}
         >
             {showFilter ? 'Hide Filters' : 'Show Filters'}
