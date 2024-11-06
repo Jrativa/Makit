@@ -52,14 +52,14 @@ export default function Header() {
     sessionStorage.removeItem('user')
     setUser(null)
     setDropdownOpen(false)
-    window.location.href = "/login";
+    window.location.href = "/";
   }
 
   return (
     <header className="bg-white">
       <nav aria-label="Global" className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8">
         <div className="flex lg:flex-1">
-          <a href="/" className="-m-1.5 p-1.5 ">
+          <a href="/Dashboard" className="-m-1.5 p-1.5 ">
             
             <img alt="" src="/logo-bg-white.png" className="h-16 w-auto rounded-full" />
           </a>
