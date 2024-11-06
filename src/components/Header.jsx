@@ -146,7 +146,7 @@ export default function Header() {
               )}
             </div>
           ) : (
-            <a href="/Login" className="text-sm/6 font-semibold text-redMakit">
+            <a href="/" className="text-sm/6 font-semibold text-redMakit">
               Log in <span aria-hidden="true">&rarr;</span>
             </a>
           )}
@@ -222,7 +222,7 @@ export default function Header() {
               )}
             </div>
           ) : (
-            <a href="/Login" className="text-sm/6 font-semibold text-redMakit">
+            <a href="/" className="text-sm/6 font-semibold text-redMakit">
               Log in <span aria-hidden="true">&rarr;</span>
             </a>
           )}
