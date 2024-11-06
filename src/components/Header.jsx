@@ -24,7 +24,7 @@ import {
 import { ChevronDownIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/react/20/solid'
 
 const products = [
-  { name: 'Analytics', description: 'Get a better understanding of your traffic', href: '/analytics', icon: ChartPieIcon },
+  { name: 'Analytics', description: 'Get a better understanding of your traffic', href: '/Analytics', icon: ChartPieIcon },
   { name: 'Engagement', description: 'Speak directly to your customers', href: '#', icon: CursorArrowRaysIcon },
   { name: 'Security', description: 'Your customers’ data will be safe and secure', href: '#', icon: FingerPrintIcon },
   { name: 'Integrations', description: 'Connect with third-party tools', href: '#', icon: SquaresPlusIcon },
@@ -76,7 +76,7 @@ export default function Header() {
           </button>
         </div>
         <PopoverGroup className="hidden lg:flex lg:gap-x-12">
-          <a href="/companiesList" className="text-sm/6 font-semibold text-gray-900">
+          <a href="/CompaniesList" className="text-sm/6 font-semibold text-gray-900">
             Find companies
           </a>
           <Popover className="relative">
@@ -118,7 +118,7 @@ export default function Header() {
               </div>
             </PopoverPanel>
           </Popover>
-          <a href="/pricing" className="text-sm/6 font-semibold text-gray-900">
+          <a href="/Pricing" className="text-sm/6 font-semibold text-gray-900">
             Plans
           </a>
           <a href="#" className="text-sm/6 font-semibold text-gray-900">
@@ -146,7 +146,7 @@ export default function Header() {
               )}
             </div>
           ) : (
-            <a href="/login" className="text-sm/6 font-semibold text-redMakit">
+            <a href="/Login" className="text-sm/6 font-semibold text-redMakit">
               Log in <span aria-hidden="true">&rarr;</span>
             </a>
           )}
@@ -191,10 +191,10 @@ export default function Header() {
                     ))}
                   </DisclosurePanel>
                 </Disclosure>
-                <a href="/companiesList" className="-mx-3 block rounded-lg py-2 px-3 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">
+                <a href="/CompaniesList" className="-mx-3 block rounded-lg py-2 px-3 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">
                   Find companies
                 </a>
-                <a href="/pricing" className="-mx-3 block rounded-lg py-2 px-3 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">
+                <a href="/Pricing" className="-mx-3 block rounded-lg py-2 px-3 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">
                   Plans
                 </a>
                 <a href="#" className="-mx-3 block rounded-lg py-2 px-3 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">
@@ -222,7 +222,7 @@ export default function Header() {
               )}
             </div>
           ) : (
-            <a href="/login" className="text-sm/6 font-semibold text-redMakit">
+            <a href="/Login" className="text-sm/6 font-semibold text-redMakit">
               Log in <span aria-hidden="true">&rarr;</span>
             </a>
           )}
