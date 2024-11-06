@@ -5,36 +5,38 @@ const Pricing = () => {
 
   const plans = [
     {
-      name: "Freelancer",
+      name: "Basic",
       priceMonthly: 29,
-      priceAnnually: 290,
-      features: ["Profile listing", "Up to 1,000 views per month", "Basic analytics (views, clicks)"],
+      priceAnnually: 300,
+      features: ["Free Access to Workshops", "Basic company profile on the platform", "Access to a limited list of client projects (5 projects per month)", "Receipt of direct contact requests from customers", "Access to tips and resources to improve the visibility of the company"],
       support: "48-hour support response time",
     },
     {
-      name: "Startup",
-      priceMonthly: 59,
-      priceAnnually: 590,
+      name: "Pro",
+      priceMonthly: 69,
+      priceAnnually: 750,
       features: [
-        "Enhanced profile listing with photos and videos",
-        "Up to 10,000 views per month",
-        "Advanced analytics (views, clicks, engagement rates)",
-        "Priority listing in search results",
-        "Automated marketing tools (e.g., email outreach)"
+        "Free Access to Workshops",
+        "Complete company profile with logo, detailed description and photos of achievements",
+        "Unlimited access to all available client projects",
+        "Ability to send proposals directly to customers",
+        "Priority and dedicated support for technical assistance",
+        "Access to profile statistics (number of views, contact rate"
       ],
       highlight: true,
     },
     {
-      name: "Enterprise",
-      priceMonthly: 99,
-      priceAnnually: 990,
+      name: "Premium",
+      priceMonthly: 130,
+      priceAnnually: 1200,
       features: [
-        "Premium profile listing with branding options",
-        "Unlimited views per month",
-        "Advanced analytics with custom reporting",
-        "Top placement in search results",
-        "Dedicated account manager",
-        "Access to marketing automations and lead generation tools"
+        "Free Access to Workshops",
+        "Priority and exclusive access to certain client projects",
+        "Highlighting the company's profile in searches and suggestions",
+        "Integrated project management tool with potential customer tracking",
+        "Personalised advice and marketing support to maximise conversion",
+        "Advanced statistics and performance analysis",
+        "VIP support with dedicated assistance"
       ],
     },
   ];
