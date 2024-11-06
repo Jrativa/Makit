@@ -1,7 +1,9 @@
 import { useState } from 'react';
+"use client";
+import { Carousel } from "flowbite-react";
 
 const companies = [
-  { id: 1, name: "BuildSmart Consulting", description: "Offering expert consulting in construction project management and sustainable building practices.", services: ["Project Management", "Cost Estimation", "Quality Assurance"], category: "Architects", logo: "/logo.png", href:"/profile", premium: true },
+  { id: 1, name: "BuildSmart Consulting", description: "Offering expert consulting in construction project management and sustainable building practices.", services: ["Project Management", "Cost Estimation", "Quality Assurance"], category: "Architects", logo: "/logo.png", href:"/profile", premium: true, images:[{url:"/Designer.png"}] },
   { id: 2, name: "HomeRevamp Interiors", description: "Specializing in interior remodeling, from kitchens to living spaces with a modern design touch.", services: ["Interior Design", "Kitchen Remodeling", "Bathroom Renovation"], category: "Interior Designers", logo: "/logo1.png", href:"/profile" },
   { id: 3, name: "EcoBuild Solutions", description: "Focused on eco-friendly construction and sustainable building materials for a greener future.", services: ["Green Building Consulting", "Energy Efficient Design", "Sustainable Materials"], category: "Architects", logo: "/logo2.png",  href:"/profile" },
   { id: 4, name: "PrimeElectric", description: "Licensed electricians for residential and commercial projects, specializing in wiring and lighting.", services: ["Residential Wiring", "Commercial Lighting", "Electrical Repairs"], category: "Electricians", logo: "/logo3.png", href:"/profile" },
@@ -66,43 +68,74 @@ function CompanyList() {
         <div className="bg-white shadow-lg rounded-lg p-6">
           <h1 className="text-2xl font-bold text-gray-800 mb-6">Construction & Interior Remodeling Companies</h1>
           <div className="space-y-6">
-            {filteredCompanies.map((company) => (
-              <a href={company.href} key={company.id} className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 flex flex-col sm:flex-row items-center">
+          {filteredCompanies.map((company) => (
+            <button
+              onClick={() => window.location.href = company.href}
+              key={company.id}
+              className={`p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 flex flex-col sm:flex-row items-center ${
+                company.premium ? 'bg-gold' : 'bg-white'
+              }`}
+            >
+              {company.premium === true && (
+                <img src={company.logo} alt={`${company.name} logo`} className="mr-0 sm:mr-4 rounded-full object-cover mb-4 sm:mb-0" style={{ width: '15%' }} />
+              )}
+              {!company.premium && (
                 <img src={company.logo} alt={`${company.name} logo`} className="w-20 h-20 mr-0 sm:mr-4 rounded-full object-cover mb-4 sm:mb-0" />
-                <div className="text-center sm:text-left">
+              )}
+              <div className="text-center sm:text-left ">
+                
                   <h2 className="text-xl font-semibold text-gray-800">{company.name}</h2>
                   <p className="text-gray-600 mt-2">{company.description}</p>
-                  <h3 className="mt-4 font-medium text-gray-800">Services Offered:</h3>
-                  <ul className="list-disc list-inside text-gray-600 mt-2">
-                    {company.services.map((service, index) => (
-                      <li key={index}>{service}</li>
-                    ))}
-                  </ul>
-                </div>
-                <div style={{marginLeft:'10%', marginBottom:'6%'}}>
-                  {company.premium && (
-                    <div className="bg-redMakit text-white p-2 rounded-full text-sm" >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        strokeWidth="1.5"
-                        stroke="currentColor"
-                        className="size-6"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 0 1-1.043 3.296 3.745 3.745 0 0 1-3.296 1.043A3.745 3.745 0 0 1 12 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 0 1-3.296-1.043 3.745 3.745 0 0 1-1.043-3.296A3.745 3.745 0 0 1 3 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 0 1 1.043-3.296 3.746 3.746 0 0 1 3.296-1.043A3.746 3.746 0 0 1 12 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 0 1 3.296 1.043 3.746 3.746 0 0 1 1.043 3.296A3.745 3.745 0 0 1 21 12Z"
-                        />
-                      </svg>
-
+                  <div className='grid grid-cols-2 gap-8'>
+                    <div>
+                        <h3 className="mt-4 font-medium text-gray-800">Services Offered:</h3>
+                        <ul className="list-disc list-inside text-gray-600 mt-2">
+                        {company.services.map((service, index) => (
+                          <li key={index}>{service}</li>
+                        ))}
+                      </ul>
                     </div>
-                      
+                    {company.premium===true && (
+                    <div className="h-56 sm:h-64 xl:h-60 2xl:h-96 ml-3 p-2">
+                      <span style={{color:"black"}}>Some work</span>
+                      <Carousel slide={false} onClick={(e) => e.stopPropagation()}>
+                        <img src="/Designer.jpeg" alt="..." />
+                        <img src="https://flowbite.com/docs/images/carousel/carousel-2.svg" alt="..." />
+                        <img src="https://flowbite.com/docs/images/carousel/carousel-3.svg" alt="..." />
+                        <img src="https://flowbite.com/docs/images/carousel/carousel-4.svg" alt="..." />
+                        <img src="https://flowbite.com/docs/images/carousel/carousel-5.svg" alt="..." />
+                      </Carousel>
+                  </div>
                   )}
-                </div>
-              </a>
-            ))}
+
+                  </div>
+                
+                
+              </div>
+              
+              <div style={{ marginLeft: '10%', marginBottom: '6%' }}>
+                {company.premium && (
+                  <div className="bg-redMakit text-white p-2 rounded-full text-sm">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      strokeWidth="1.5"
+                      stroke="currentColor"
+                      className="size-6"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 0 1-1.043 3.296 3.745 3.745 0 0 1-3.296 1.043A3.745 3.745 0 0 1 12 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 0 1-3.296-1.043 3.745 3.745 0 0 1-1.043-3.296A3.745 3.745 0 0 1 3 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 0 1 1.043-3.296 3.746 3.746 0 0 1 3.296-1.043A3.746 3.746 0 0 1 12 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 0 1 3.296 1.043 3.746 3.746 0 0 1 1.043 3.296A3.745 3.745 0 0 1 21 12Z"
+                      />
+                    </svg>
+                  </div>
+                )}
+              </div>
+            </button>
+          ))}
+
           </div>
         </div>
       </div>

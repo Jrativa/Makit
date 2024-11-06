@@ -10,24 +10,26 @@ import Analytics from './components/Analytics';
 import { ChatProvider } from './context/ChatProvider';
 
 import './App.css';
+import { ThemeProvider } from "@material-tailwind/react";
 
 function App() {
   return (
     <div className="App">
       <Header />
-      <ChatProvider>
+      <ThemeProvider >
         <BrowserRouter>
-          <Routes>
-            <Route path='/' element={<Dashboard />} /> 
-            <Route path='/Login' element={<Login />} />
-            <Route path='/Profile' element={<Profile />} />
-            <Route path='/CompaniesList' element={<CompanyList />} />
-            <Route path='/Pricing' element={<Pricing />} />
-            <Route path='/Analytics' element={<Analytics />} />
-          </Routes>
+          <ChatProvider>
+            <Routes>
+              <Route path="/" element={<Login />} />
+              <Route path="/Dashboard" element={<Dashboard />} />
+              <Route path="/Profile" element={<Profile />} />
+              <Route path="/CompaniesList" element={<CompanyList />} />
+              <Route path="/Pricing" element={<Pricing />} />
+              <Route path="/Analytics" element={<Analytics />} />
+            </Routes>
+          </ChatProvider>
         </BrowserRouter>
-        
-      </ChatProvider>
+      </ThemeProvider>
       <Footer />
     </div>
   );

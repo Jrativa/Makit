@@ -41,5 +41,9 @@ html, body, #root {
 .group-hover-text-redMakit:hover{
   color: #ff3131;
 }
+.bg-gold {
+  background-color: #f1cccccf; /* color dorado */
+}
+
 
 
