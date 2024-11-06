@@ -9,14 +9,14 @@ export default function Login() {
   const handleGoogleLogin = () => {
     // Implement Google login functionality here
     sessionStorage.setItem('user', 'Team105');
-    navigate('/'); 
+    navigate('/Dashboard'); 
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     console.log('Email:', email, 'Password:', password);
     await sessionStorage.setItem('user', 'Team105');
-    navigate('/'); 
+    navigate('/Dashboard'); 
     // Implement login functionality here
   };
 
