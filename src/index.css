@@ -1,0 +1,31 @@
+/* src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+
+  
+  color: rgba(254, 252, 252, 0.87);
+  background-color: rgba(241, 236, 228, 0.896);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #f6f6f6;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #ff3131;
+}
+
+
+
+

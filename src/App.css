@@ -1,0 +1,45 @@
+#root {
+  text-align: center;
+}
+
+/* App.css */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.App > * {
+  flex-shrink: 0;
+}
+
+.App > header {
+  flex-shrink: 0;
+}
+
+.App > main {
+  flex-grow: 1;
+}
+
+.App > footer {
+  flex-shrink: 0;
+}
+
+.text-redMakit {
+  color:#ff3131
+}
+
+.bg-redMakit {
+  background-color: #ff3131
+}
+.group-hover-text-redMakit:hover{
+  color: #ff3131;
+}
+
+
