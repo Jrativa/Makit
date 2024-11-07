@@ -3,26 +3,27 @@ import { useState } from "react";
 const Chat = () => {
   const [chats, setChats] = useState({
     Felipe: [
-      { id: 1, text: "Hola, ¿cómo estás?", sender: "user" },
-      { id: 2, text: "Todo bien, ¿y tú?", sender: "bot" },
+      { id: 1, text: "Hi Felipe, I'm looking to remodel my kitchen. Any suggestions?", sender: "user" },
+      { id: 2, text: "Hello! Yes, I can connect you with a great team. What's your budget?", sender: "bot" },
     ],
     Felix: [
-      { id: 1, text: "Hola Felix!", sender: "user" },
-      { id: 2, text: "¡Hey! ¿Qué tal?", sender: "bot" },
+      { id: 1, text: "Hey Felix! I need advice on remodeling my living room.", sender: "user" },
+      { id: 2, text: "Sure, I recommend starting with a design plan. Do you have any ideas in mind?", sender: "bot" },
     ],
     Daria: [
-      { id: 1, text: "Daria, ¿te llegó el correo?", sender: "user" },
-      { id: 2, text: "Sí, gracias!", sender: "bot" },
+      { id: 1, text: "Hi Daria, do you know any good companies for bathroom renovations?", sender: "user" },
+      { id: 2, text: "Yes, I know a reliable company. They specialize in modern designs.", sender: "bot" },
     ],
     Saiful: [
-      { id: 1, text: "Hola Saiful!", sender: "user" },
-      { id: 2, text: "¡Hola! ¿Cómo estás?", sender: "bot" },
+      { id: 1, text: "Saiful, I need help with my office remodel.", sender: "user" },
+      { id: 2, text: "Happy to help! What kind of style are you going for?", sender: "bot" },
     ],
     Jose: [
-      { id: 1, text: "Hola Jose!", sender: "user" },
-      { id: 2, text: "¿Qué tal?", sender: "bot" },
+      { id: 1, text: "Hey Jose! I’m considering remodeling my basement.", sender: "user" },
+      { id: 2, text: "That's exciting! I know some contractors who can help. When would you like to start?", sender: "bot" },
     ],
   });
+  
   const [currentChat, setCurrentChat] = useState("Felipe");
   const [input, setInput] = useState("");
 
@@ -80,7 +81,7 @@ const Chat = () => {
               onClick={handleSend}
               className="ml-2 px-4 py-2 bg-redMakit text-white rounded-lg hover:bg-red-700"
             >
-              Enviar
+              Send
             </button>
           </div>
         </div>
