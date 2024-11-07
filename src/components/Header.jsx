@@ -63,7 +63,7 @@ export default function Header() {
             
             <img alt="" src="/logo-bg-white.png" className="h-16 w-auto rounded-full" />
           </a>
-          <span className="sr-only">Your Companysds</span>
+          <span className="sr-only"></span>
         </div>
         <div className="flex lg:hidden">
           <button

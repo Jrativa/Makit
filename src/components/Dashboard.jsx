@@ -6,7 +6,7 @@ function Dashboard() {
       <p className="text-gray-600 mb-8 text-center">
         Discover amazing features and stay connected with us. Sign up to explore more!
       </p>
-      <button className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-500 transition duration-200">
+      <button className="px-6 py-2 bg-redMakit text-white rounded-lg hover:bg-red-400 transition duration-200" onClick={()=>{window.location.href = "/CompaniesList";}}>
         Get Started
       </button>
     </div>
