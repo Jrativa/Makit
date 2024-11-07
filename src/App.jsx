@@ -7,6 +7,7 @@ import Profile from './components/Profile';
 import CompanyList from './components/CompaniesList';
 import Pricing from './components/Pricing';
 import Analytics from './components/Analytics';
+import Chat from './components/Chat';
 import { ChatProvider } from './context/ChatProvider';
 
 import './App.css';
@@ -26,6 +27,7 @@ function App() {
               <Route path="/CompaniesList" element={<CompanyList />} />
               <Route path="/Pricing" element={<Pricing />} />
               <Route path="/Analytics" element={<Analytics />} />
+              <Route path="/Chat" element={<Chat />} />
             </Routes>
           </ChatProvider>
         </BrowserRouter>

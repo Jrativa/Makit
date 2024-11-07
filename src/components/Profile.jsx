@@ -30,7 +30,7 @@ function Profile() {
           <button className="px-4 py-2 bg-redMakit text-white font-semibold rounded-md hover:bg-red-700">
             Follow
           </button>
-          <button className="px-4 py-2 border border-gray-300 text-gray-700 font-semibold rounded-md hover:bg-gray-100">
+          <button onClick={()=>{window.location.href="/chat"}} className="px-4 py-2 border border-gray-300 text-gray-700 font-semibold rounded-md hover:bg-gray-100">
             Message
           </button>
         </div>
